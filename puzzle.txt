@@ -1,0 +1,14 @@
+https://www.youtube.com/watch?v=X3HDnrehyDM
+
+Gordon Hamilton
+I see so many great solutions to the problem at the end of the video. Thank you all! Here is another tough problem that I don't know the answer to...
+
+For any initial string of waterlogged (X) and normal lily pads (_), can you always add a finite number of normal lily pads to the end so that it is solvable?
+
+Example... the string _ X X X can be solved by adding four normal lily pads to the end:
+_ X X X _ _ _ _.
+
+Example... the string _ X _ X _ _ _ X X can be solved by adding six normal lily pads to the end:
+_ X _ X _ _ _ X X _ _ _ _ _ _.
+
+We can record our results using binary. Normal lily pads are 1 and waterlogged lily pads are 0. So the first example is a binary string 1000 with the answer 10001111. Do all binary strings have answers? If not - what is the lowest binary string that results in a failure?﻿
