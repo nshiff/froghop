@@ -1,31 +1,16 @@
 class Froghop:
 
+    import froghopcalculator
+    fhcalc = froghopcalculator.FroghopCalculator()
+
     def __init__(self):
         pass
 
-
-
-    def _getFinalXSubscript(self, lilypadstring):
-        start = 0
-        for i in range(len(lilypadstring)):
-            if lilypadstring[i] == 'x':
-                start = i
-        return start
-
     def _doesNaiveSolutionWork(self, lilypadstring):
-        final_x_subscript = self._getFinalXSubscript(lilypadstring)
+        final_x_subscript = fhcalc.getFinalXSubscript(lilypadstring)
         cursor_position = final_x_subscript
 
-
-
-
-
-
-
-
         return cursor_position
-
-
 
 
 
@@ -51,8 +36,6 @@ class Froghop:
             solution += '_'
             i += 1
         return solution
-
-
 
 
 

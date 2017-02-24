@@ -15,7 +15,6 @@ class TestFroghop(unittest.TestCase):
         self.assertEquals(-1, f.getSolution('@'))
         self.assertEquals(-1, f.getSolution('@&*^GV*^&B'))
 
-
     def test_basicsolutions(self):
         self.assertEquals('__',f.getSolution('__'))
         self.assertEquals('___',f.getSolution('___'))
@@ -30,41 +29,22 @@ class TestFroghop(unittest.TestCase):
         self.assertEquals(f.getSolution('xx'), f.getSolution('XX'))
         self.assertEquals(f.getSolution('xxxxxxxxxxx'), f.getSolution('XXXXXXXXXXX'))
 
-
-
-
-
     def test_save_one_over_long_x_string(self):
         self.assertEquals('_x__', f.getSolution('_x'))
         self.assertEquals('_xx___', f.getSolution('_xx'))
         self.assertEquals('_xxxxxxxxx__________', f.getSolution('_xxxxxxxxx'))
-
 
     def test_save_two_over_long_x_string(self):
         self.assertEquals('__x__', f.getSolution('__x'))
         self.assertEquals('__xx___', f.getSolution('__xx'))
         self.assertEquals('__xxxxxxxxx__________', f.getSolution('__xxxxxxxxx'))
 
-
     def test_save_n_over_long_x_string(self):
         self.assertEquals('_________x__', f.getSolution('__x'))
         self.assertEquals('_________xx___', f.getSolution('__xx'))
         self.assertEquals('_________xxxxxxxxx__________', f.getSolution('__xxxxxxxxx'))
 
-
-
-
-
-
     def test_puzzlestatement(self):
-        self.assertEquals(8, f._getFinalXSubscript('_x_x___xx___'))
-        self.assertEquals(8, f._getFinalXSubscript('_x_x___xx________________'))
-        self.assertEquals(0, f._getFinalXSubscript('____________'))
-        self.assertEquals(3, f._getFinalXSubscript('_x_x____'))
-        self.assertEquals(16, f._getFinalXSubscript('xxxxxxxxxxxxxxxxx'))
-
-
-
         self.assertEquals('_xxx____', f.getSolution('_xxx'))
 
     def test_puzzlestatement2(self):
